@@ -10,9 +10,9 @@ hooks:
     - location: C:\Scripts\UnzipResourceBundle.bat
   
   AfterInstall:
-    - location: C:\Scripts/RunResourceTests.bat
+    - location: C:\Scripts\RunResourceTests.bat
       timeout: 180
   ApplicationStart:
-    - location: C:\Scripts/RunFunctionalTests.bat
+    - location: C:\Scripts\RunFunctionalTests.bat
       timeout: 3600
 
