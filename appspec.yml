@@ -1,0 +1,18 @@
+ version: 0.0
+os: windows
+files:
+  - source: C:\Config\config.txt
+    destination: C:\webapps\Config
+  - source: source
+    destination: C:\webapps\myApp
+hooks:
+  BeforeInstall:
+    - location: C:\Scripts\UnzipResourceBundle.bat
+  
+  AfterInstall:
+    - location: C:\Scripts/RunResourceTests.bat
+      timeout: 180
+  ApplicationStart:
+    - location: C:\Scripts/RunFunctionalTests.bat
+      timeout: 3600
+
