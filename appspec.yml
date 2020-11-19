@@ -1,18 +1,23 @@
- version: 0.0
-os: windows
+
+version: 0.0
+os: linux
 files:
-  - source: C:\Config\config.txt
-    destination: C:\webapps\Config
-  - source: source
-    destination: C:\webapps\myApp
+  - source: /
+    destination: /node-weather-website
 hooks:
   BeforeInstall:
-    - location: C:\Scripts\UnzipResourceBundle.bat
-  
+    - location: scripts/install_components.sh
+      timeout: 300
+      runas: root
   AfterInstall:
-    - location: C:\Scripts\RunResourceTests.bat
-      timeout: 180
+    - location: scripts/change_permissions.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
-    - location: C:\Scripts\RunFunctionalTests.bat
-      timeout: 3600
-
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: root
