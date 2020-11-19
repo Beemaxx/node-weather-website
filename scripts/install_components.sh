@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo sudo
+sudo su
 
 cd /node-weather-app
 
