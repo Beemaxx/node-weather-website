@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chmod -R 777 /weatherapp
+chmod -R 777 /node-weather-website
