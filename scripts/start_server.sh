@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pm2 start src/app.js
+pm2 start /node-weather-website/src/app.js
