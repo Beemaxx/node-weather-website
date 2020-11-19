@@ -1,5 +1,8 @@
 #!/bin/bash
+sudo sudo
+
 cd /node-weather-app
+
 sudo apt-get update
 sudo apt install nodejs
 sudo apt install npm
